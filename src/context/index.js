@@ -1,12 +1,16 @@
-import React from "react";
-import { AuthProvider } from "./auth";
-import { UserProvider } from "./user";
+import React from 'react';
+import { ThemeProvider } from 'emotion-theming';
+import { AuthProvider } from './auth';
+import { UserProvider } from './user';
+import theme from '../theme';
 
 function AppProviders({ children }) {
   return (
-    <AuthProvider>
+    <ThemeProvider theme={theme}>
+      <AuthProvider>
         <UserProvider>{children}</UserProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

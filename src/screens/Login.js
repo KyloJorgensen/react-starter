@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import Button from '../components/ui/button';
 import { useAuth } from '../context/auth';
 import logoGreen from '../images/cove-logo-green-light.svg';
 
@@ -51,9 +52,9 @@ function Login() {
             value={values.password}
           />
           {errors.password ? errors.password : null}
-          <button className="login-form__button" type="submit">
+          <Button type="submit">
             Log In
-          </button>
+          </Button>
         </form>
       </div>
     </div>
