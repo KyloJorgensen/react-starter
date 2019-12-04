@@ -2,7 +2,6 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    'jest/globals': true,
   },
   extends: [
     'react-app',
@@ -10,7 +9,6 @@ module.exports = {
     'airbnb',
     'prettier',
     'plugin:prettier/recommended',
-    'plugin:jest/all',
   ],
   globals: {
     Atomics: 'readonly',
@@ -23,7 +21,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'jest', 'emotion'],
+  plugins: ['react', 'prettier', 'emotion'],
   rules: {
     'arrow-parens': ['error', 'as-needed'],
     'prettier/prettier': 'error',
@@ -33,4 +31,14 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
   },
+  overrides: [
+    {
+      files: ['*.test.[j,t]s?(x)'],
+      env: {
+        'jest/globals': true,
+      },
+      extends: ['plugin:jest/all'],
+      plugins: ['jest'],
+    },
+  ],
 };
