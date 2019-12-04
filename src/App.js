@@ -1,10 +1,10 @@
-import React from "react";
-import { useUser } from "./context/user";
-import { FullPageSpinner } from "./components/loader";
+import React from 'react';
+import { useUser } from './context/user';
+import { FullPageSpinner } from './components/loader';
 
-const loadAuthenticatedApp = () => import("./authenticated-app");
+const loadAuthenticatedApp = () => import('./authenticated-app');
 const AuthenticatedApp = React.lazy(loadAuthenticatedApp);
-const UnauthenticatedApp = React.lazy(() => import("./unauthenticated-app"));
+const UnauthenticatedApp = React.lazy(() => import('./unauthenticated-app'));
 
 function App() {
   const user = useUser();
