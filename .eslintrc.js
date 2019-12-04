@@ -1,6 +1,7 @@
 module.exports = {
   env: {
-    'jest/globals': true,
+    browser: true,
+    es6: true,
   },
   extends: [
     'react-app',
