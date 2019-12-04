@@ -1,8 +1,8 @@
-import React from "react";
-import { useAsync } from "react-async";
-import { bootstrapAppData } from "../utils/bootstrap";
-import * as authClient from "../utils/auth-client";
-import { FullPageSpinner } from "../components/loader";
+import React from 'react';
+import { useAsync } from 'react-async';
+import bootstrapAppData from '../utils/bootstrap';
+import * as authClient from '../utils/auth-client';
+import { FullPageSpinner } from '../components/loader';
 
 const AuthContext = React.createContext();
 
@@ -14,9 +14,9 @@ function AuthProvider(props) {
     isRejected,
     isPending,
     isSettled,
-    reload
+    reload,
   } = useAsync({
-    promiseFn: bootstrapAppData
+    promiseFn: bootstrapAppData,
   });
 
   React.useLayoutEffect(() => {
@@ -32,7 +32,7 @@ function AuthProvider(props) {
     if (isRejected) {
       return (
         <div>
-          <p>Uh oh... There's a problem. Try refreshing the app.</p>
+          <p>Uh oh... There&#39s a problem. Try refreshing the app.</p>
           <pre>{error.message}</pre>
         </div>
       );

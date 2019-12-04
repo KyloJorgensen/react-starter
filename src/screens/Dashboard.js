@@ -1,18 +1,18 @@
-import React from "react";
-import Layout from '../components/layout'
+import React from 'react';
+import Layout from '../components/layout';
 import { useUser } from '../context/user';
 
 const Dashboard = () => {
-  const user = useUser();
+  const { name } = useUser();
 
   return (
     <Layout>
       <div className="dashboard">
         <h1>Dashboard</h1>
-        <p>Welcome, {user.name}!</p>
+        <p>Welcome, {name}!</p>
       </div>
     </Layout>
   );
-}
+};
 
 export default Dashboard;

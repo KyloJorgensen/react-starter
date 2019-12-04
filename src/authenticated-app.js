@@ -1,8 +1,8 @@
-import React from "react";
-import { Router, Redirect } from "@reach/router";
-import Dashboard from "./screens/Dashboard";
-import AccountInfo from "./screens/AccountInfo";
-import NotFound from "./screens/NotFound";
+import React from 'react';
+import { Router, Redirect } from '@reach/router';
+import Dashboard from './screens/Dashboard';
+import AccountInfo from './screens/AccountInfo';
+import NotFound from './screens/NotFound';
 
 function AuthenticatedApp() {
   return (
@@ -13,7 +13,7 @@ function AuthenticatedApp() {
 }
 
 function RedirectHome() {
-  return <Redirect to="/dashboard" noThrow={true} />;
+  return <Redirect to="/dashboard" noThrow />;
 }
 
 function Routes() {

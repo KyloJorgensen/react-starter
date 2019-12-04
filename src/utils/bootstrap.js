@@ -1,14 +1,14 @@
-import { getUser } from "./auth-client";
+import { getUser } from './auth-client';
 
 async function bootstrapAppData() {
   const data = await getUser();
   if (!data) {
-    return { user: null, token: "" };
+    return { user: null, token: '' };
   }
 
   return {
-    user: data
+    user: data,
   };
 }
 
-export { bootstrapAppData };
+export default bootstrapAppData;
