@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    primary: "#00b19a",
+    primary: '#00b19a',
     primaryDarker: '#00cdb9',
     primaryDarkest: '#00b29c',
     primaryLighter: '#3ebeb1',
@@ -11,7 +11,7 @@ const theme = {
     warning: '#f17927',
     warningDarker: '#e67c33',
     accent: '#008cff',
-    accendDark: '#274a67',
+    accentDark: '#274a67',
     grey50: '#f0f4f7',
     grey100: '#e4ebf1',
     grey150: '#e4ded6',
@@ -24,7 +24,7 @@ const theme = {
     grey700: '#4e5661',
     grey900: '#2c3138',
     grey1000: '#2c3239',
-  }
+  },
 };
 
 export default theme;

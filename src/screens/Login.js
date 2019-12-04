@@ -6,9 +6,11 @@ import { useAuth } from '../context/auth';
 import logoGreen from '../images/cove-logo-green-light.svg';
 
 const validationSchema = Yup.object({
-  email: Yup.string().email().required("Required"),
-  password: Yup.string().required("Required")
-})
+  email: Yup.string()
+    .email()
+    .required('Required'),
+  password: Yup.string().required('Required'),
+});
 
 function Login() {
   const { login } = useAuth();
@@ -21,10 +23,11 @@ function Login() {
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
-      email: "",
-      password: ""
+      email: '',
+      password: '',
     },
     validationSchema,
+    // eslint-disable-next-line no-shadow
     onSubmit(values) {
       login({ email: values.email, password: values.password });
     },
@@ -52,9 +55,7 @@ function Login() {
             value={values.password}
           />
           {errors.password ? errors.password : null}
-          <Button type="submit">
-            Log In
-          </Button>
+          <Button type="submit">Log In</Button>
         </form>
       </div>
     </div>

@@ -1,9 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import AppProviders from './context';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('app', () => {
+  // eslint-disable-next-line jest/expect-expect
+  it('renders without crashing', () => {
+    expect.assertions(0);
+    const div = document.createElement('div');
+    ReactDOM.render(
+      <AppProviders>
+        <App />
+      </AppProviders>,
+      div
+    );
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });

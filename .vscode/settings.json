@@ -1,0 +1,23 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#095fbf",
+    "activityBar.activeBorder": "#f867ab",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#f867ab",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#07478e",
+    "titleBar.inactiveBackground": "#07478e99",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "panel.border": "#095fbf",
+    "sideBar.border": "#095fbf",
+    "editorGroup.border": "#095fbf",
+    "tab.activeBorder": "#095fbf"
+  },
+  "peacock.color": "#07478e",
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "prettier.singleQuote": true,
+  "eslint.validate": ["javascript", "javascriptreact"]
+}

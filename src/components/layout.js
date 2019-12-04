@@ -1,8 +1,9 @@
-import React from "react";
-import { Link } from "@reach/router";
-import { useAuth } from "../context/auth";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from '@reach/router';
+import { useAuth } from '../context/auth';
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   const { logout } = useAuth();
   return (
     <div className="app">
@@ -16,20 +17,29 @@ function Layout({ children }) {
       <div className="main">
         <div className="menu">
           <Link to="/dashboard" className="menu__link">
-            <div className="menu__item">
-              Dashboard
-            </div>
+            <div className="menu__item">Dashboard</div>
           </Link>
           <Link to="/account-info" className="menu__link">
-            <div className="menu__item">
-              Account Info
-            </div>
+            <div className="menu__item">Account Info</div>
           </Link>
         </div>
         <div className="content">{children}</div>
       </div>
     </div>
   );
-}
+};
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+Layout.getDefaultProps = () => {
+  return {
+    children: null,
+  };
+};
 
 export default Layout;

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
-
-const Button = props => {
+const Button = ({ children, ...props }) => {
   const { colors } = useTheme();
   const base = css`
     background-color: ${colors.accent};
@@ -15,11 +15,23 @@ const Button = props => {
     }
   `;
   return (
-    <button css={base}
-    {...props}>
-      {props.children}
+    <button css={base} {...props}>
+      {children}
     </button>
-  )
-}
+  );
+};
+
+Button.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+Button.getDefaultProps = () => {
+  return {
+    children: null,
+  };
+};
 
 export default Button;

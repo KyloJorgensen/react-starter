@@ -1,15 +1,9 @@
-import React, { Component } from "react";
+import React from 'react';
 
-class NotFound extends Component {
-  state = {};
-
-  render() {
-    return (
-      <div className="not-found">
-        <h1>Not Found</h1>
-      </div>
-    );
-  }
-}
+const NotFound = () => (
+  <div className="not-found">
+    <h1>Not Found</h1>
+  </div>
+);
 
 export default NotFound;
